@@ -12,6 +12,7 @@
             <p class="card-text">Count: {{product.count}}/{{product.maxcount}}</p>
             <button class="btn btn-secondary" v-if="product.count < product.maxcount" @click = "plus(product.id)">+</button>
             <button class="btn btn-secondary" @click= "minus(product.id)">-</button>
+            <button class="btn btn-secondary" @click= "update(product.id)">update</button>
         </div>
     </div>
 </template>
@@ -76,7 +77,7 @@ export default {
                     });
                     let uri = `api/delete/${id}`;
                     this.axios.delete(uri).then(response => {
-                        setTimeout(function(){ location.reload(); }, 2000);
+                        setTimeout(function(){ location.reload(); }, 1000);
                     });
                     console.log("Deleted article with id ..." +id);
                 }

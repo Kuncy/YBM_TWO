@@ -105,4 +105,25 @@ class ProductController extends Controller
 
         return response()->json($msg);
     }
+    public function update(Request $request, $id)
+    {
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'count' => 'required',
+            'maxcount' => 'required'
+        ]);
+
+        $article = \App\Product::find($id);
+        $article->name = $validatedData['name'];
+        $article->count = $validatedData['count'];
+        $article->maxcount = $validatedData['maxcount'];
+        $article->save();
+
+        $msg = [
+            'success' => true,
+            'message' => 'Count updated successfully'
+        ];
+
+        return response()->json($msg);
+    }
 }

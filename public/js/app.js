@@ -65944,7 +65944,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -66042,6 +66042,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     if (!name || !count || !maxcount) {
                         _this.$swal.showValidationMessage('Bitte Daten vollst\xE4ndig angeben');
                     }
+                    if (count > maxcount) {
+                        _this.$swal.showValidationMessage('Bitte Z\xE4hlung \xFCberpr\xFCfen');
+                    }
                     return { name: name, count: count, maxcount: maxcount };
                 }
             }).then(function (result) {
@@ -66056,6 +66059,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                         maxcount: '' + result.value.maxcount
                     }
                 });
+                setTimeout(function () {
+                    location.reload();
+                }, 2000);
             });
         }
     }
@@ -66226,6 +66232,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     components: {},
@@ -66286,7 +66293,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     _this.axios.delete(uri).then(function (response) {
                         setTimeout(function () {
                             location.reload();
-                        }, 2000);
+                        }, 1000);
                     });
                     console.log("Deleted article with id ..." + id);
                 }
@@ -66401,6 +66408,19 @@ var render = function() {
               }
             },
             [_vm._v("-")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-secondary",
+              on: {
+                click: function($event) {
+                  return _vm.update(_vm.product.id)
+                }
+              }
+            },
+            [_vm._v("update")]
           )
         ])
       : _vm._e()

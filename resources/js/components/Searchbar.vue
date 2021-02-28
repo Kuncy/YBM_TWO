@@ -50,7 +50,10 @@
                     const count = this.$swal.getPopup().querySelector('#count').value
                     const maxcount = this.$swal.getPopup().querySelector('#maxcount').value
                     if (!name || !count || !maxcount) {
-                    this.$swal.showValidationMessage(`Bitte Daten vollständig angeben`)
+                        this.$swal.showValidationMessage(`Bitte Daten vollständig angeben`)
+                    }
+                    if(count > maxcount){
+                        this.$swal.showValidationMessage(`Bitte Zählung überprüfen`)
                     }
                     return { name: name, count: count, maxcount: maxcount}
                 }
@@ -70,8 +73,9 @@
                             maxcount: `${result.value.maxcount}`
                         }
                     });
+                    setTimeout(function(){ location.reload(); }, 2000);
                 });
-                }
+            }
             
         }
         }
