@@ -66231,7 +66231,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     components: {},
@@ -66331,19 +66330,6 @@ var render = function() {
               staticClass: "btn btn-secondary",
               on: {
                 click: function($event) {
-                  return _vm.plus(_vm.product.id)
-                }
-              }
-            },
-            [_vm._v("+")]
-          ),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "btn btn-secondary",
-              on: {
-                click: function($event) {
                   return _vm.minus(_vm.product.id)
                 }
               }
@@ -66381,21 +66367,6 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _vm.product.count < _vm.product.maxcount
-            ? _c(
-                "button",
-                {
-                  staticClass: "btn btn-secondary",
-                  on: {
-                    click: function($event) {
-                      return _vm.plus(_vm.product.id)
-                    }
-                  }
-                },
-                [_vm._v("+")]
-              )
-            : _vm._e(),
-          _vm._v(" "),
           _c(
             "button",
             {
@@ -66407,6 +66378,19 @@ var render = function() {
               }
             },
             [_vm._v("-")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-secondary",
+              on: {
+                click: function($event) {
+                  return _vm.plus(_vm.product.id)
+                }
+              }
+            },
+            [_vm._v("+")]
           )
         ])
       : _vm._e()

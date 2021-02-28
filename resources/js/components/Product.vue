@@ -3,15 +3,14 @@
         <div class="card-body" id="card-body" v-if="product.count == product.maxcount">
             <h5 class="card-title">Number: {{product.name}}</h5>
             <p class="card-text">Count: {{product.count}}/{{product.maxcount}}</p>
-            <button class="btn btn-secondary" @click = "plus(product.id)">+</button>
             <button class="btn btn-secondary" @click= "minus(product.id)">-</button>
             <button class="btn btn-primary" @click = "deletePost(product.id)">Completed</button>
         </div>
           <div class="card-body" id="else" v-if="product.count != product.maxcount">
             <h5 class="card-title">Number: {{product.name}}</h5>
             <p class="card-text">Count: {{product.count}}/{{product.maxcount}}</p>
-            <button class="btn btn-secondary" v-if="product.count < product.maxcount" @click = "plus(product.id)">+</button>
             <button class="btn btn-secondary" @click= "minus(product.id)">-</button>
+            <button class="btn btn-secondary" @click = "plus(product.id)">+</button>
         </div>
     </div>
 </template>
