@@ -52,7 +52,7 @@
                     if (!name || !count || !maxcount) {
                         this.$swal.showValidationMessage(`Bitte Daten vollständig angeben`)
                     }
-                    if(count > maxcount){
+                                        if(count > maxcount){
                         this.$swal.showValidationMessage(`Bitte Zählung überprüfen`)
                     }
                     return { name: name, count: count, maxcount: maxcount}
