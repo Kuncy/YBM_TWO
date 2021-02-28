@@ -25,4 +25,3 @@ Route::delete('/delete/{id}', 'ProductController@delete');
 Route::post('/store', 'ProductController@store');
 Route::put('/plus/{id}', 'ProductController@plus');
 Route::put('/minus/{id}', 'ProductController@minus');
-Route::put('/update/{id}', 'ProductController@update');

@@ -66232,7 +66232,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     components: {},
@@ -66293,7 +66292,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     _this.axios.delete(uri).then(function (response) {
                         setTimeout(function () {
                             location.reload();
-                        }, 1000);
+                        }, 2000);
                     });
                     console.log("Deleted article with id ..." + id);
                 }
@@ -66408,19 +66407,6 @@ var render = function() {
               }
             },
             [_vm._v("-")]
-          ),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "btn btn-secondary",
-              on: {
-                click: function($event) {
-                  return _vm.update(_vm.product.id)
-                }
-              }
-            },
-            [_vm._v("update")]
           )
         ])
       : _vm._e()
